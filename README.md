@@ -1,3 +1,5 @@
+TASK 1
+
 Q1: Find an example command injection that prints the content of /etc/passwd file, by just providing input for the sample program.
 Answer: one example i concocted using the example docs is. python ping_service.py "1.1.1.1; cat /etc/passwd"
 
@@ -12,3 +14,7 @@ Answer: without major alteration to the code we can add a subprocess.run functio
 
 Q5: How can you be sure that injection is not possible anymore?
 Answer: as we sanitize the input values and only allow ip addresses in this should eliminate command injections in this file
+
+
+TASK 2
+
