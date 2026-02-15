@@ -18,3 +18,8 @@ Answer: as we sanitize the input values and only allow ip addresses in this shou
 
 TASK 2
 
+A)
+the final SQL string i used was "test@test.com ' OR '1'='1';". Where test email is just as filler the first semicolon stops the first part of the sql string. After that we can input sql logic into the email field. Here we use OR, so the serverside tries both of our queries separately. Last is the logic '1'='1'; this sentence is always true so the serverside automatically returns a user from its database. The password doesn't even matter in this case. that is how we get access to this account {"typ":"JWT","alg":"RS256"}.{"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2026-02-15 18:20:20.502 +00:00","updatedAt":"2026-02-15 18:20:20.502 +00:00","deletedAt":null},"iat":1771181149}
+
+B)
+First I needed to find the search get request. Then through some googling I found out about the following SQL query GET "/rest/products/search?q='))"-- Here the "'))--" Modifies the internal search thus that it returns all the items inside the datatable. I will put the JSON as a separate file not to clog this one.
